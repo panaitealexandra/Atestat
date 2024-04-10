@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --transition: all 0.7s ease;
+    --yellow: #f9d342;
+    --dark: #292826;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.6;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3 {
+    padding: 8px 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+@media(max-width: 500px){
+    body{
+        font-size: 14px;
+    }
+}
+
+/* header */
+.header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("images/egiptbackground.png") center/cover no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.head-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-top span{
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.head-top span:hover{
+    color: var(--yellow);
+}
+.head-bottom{
+    flex: 1;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+.head-bottom h2{
+    padding: 22px 0;
+    font-size: 45px;
+    border-bottom: 1px solid #fff;
+}
+.head-bottom p{
+    opacity: 0.7;
+    font-size: 20px;
+    margin: 45px auto;
+    width: 60vw;
+}
+
+@media(max-width: 500px){
+    .head-bottom h2{
+        font-size: 28px;
+    }
+    .head-bottom p{
+        font-size: 17px;
+        margin: 20px auto;
+    }
+}
+/* side nav */
+.sidenav{
+    background: var(--dark);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 300px;
+    padding: 20px;
+    transition: var(--transition);
+    z-index: 10;
+}
+/********/
+.sidenav.show{
+    right: 0;
+}
+/*************/
+.cancel-btn{
+    position: absolute;
+    right: 25px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.cancel-btn:hover{
+    opacity: 0.7;
+}
+.navbar{
+    margin-top: 50px;
+    list-style: none;
+    padding: 12px;
+}
+.navbar li a{
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+}
+.navbar li a:hover{
+    padding-left: 12px;
+}
+
+@media(max-width: 400px){
+    .sidenav{
+        width: 100vw;
+    }
+}
+
+/** title */
+.title{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: var(--yellow);
+    border-bottom: 5px solid var(--dark);
+    width: 80%;
+    margin: 15px 0;
+}
+
+.sec-width{
+    width: 85vw;
+    margin: 0 auto!important;
+}
+
+/* istorie */
+.istorie{
+    margin: 40px 0;
+
+}
+.ist{
+    display: flex;
+    margin: 30px 0;
+}
+.istorie-content{
+   padding-left: 20px;
+ 
+
+}
+.istorie-content h2{
+    opacity: 0.7;
+}
+
+@media(min-width: 992px){
+    .istorie-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    .title h2{
+        font-size: 10px!important;
+    }
+}
+
+/* booking form img */
+.book{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/egiptbackground3.jpg") center/cover no-repeat;
+    color: #fff;
+    padding: 40px 60px;
+}
+.book-form{
+    display: grid;
+}
+
+@media(min-width: 1370px){
+    .book{
+        height: 40vh;
+        display: grid;
+    }
+}
+@media(max-width: 500px){
+    .book{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*arhitectura*/
+
+.arhitectura{
+    margin: 40px 0;
+}
+
+.arh{
+    margin: 45px 0;
+    padding-bottom: 25px;
+    background: var(--dark);
+    color: #fff;
+}
+
+.arh-text{
+    padding: 5px 20px;
+}
+
+.arh-text h3{
+    font-size: 24px;
+}
+.arh-text ul{
+    list-style-type: none;
+    margin: 15px 0;
+}
+.arh-text ul li{
+    padding: 7px 0;
+}
+.arh-text ul li i{
+    color: var(--yellow);
+    margin-right: 10px;
+}
+.rate{
+    opacity: 0.8;
+}
+.rate span{
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--yellow);
+}
+.arh-image{
+    overflow: hidden;
+}
+.arh-image img{
+    transition: var(--transition);
+}
+.arh-image:hover img{
+    transform: scale(1.1);
+}
+
+@media (min-width: 900px){
+    .arhitectura-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .arh{
+        flex: 0 0 calc(50% - 20px);
+        margin: 10px;
+    }
+}
+@media(min-width: 1370px){
+    .arhitectura-container{
+        flex-direction: column;
+    }
+    .arh{
+        display: flex;
+        padding-bottom: 0;
+        margin: 5px 0;
+    }
+    .arh-image{
+        flex: 1;
+    }
+    .arh-image img{
+        height: 100%;
+    }
+    .arh-text{
+        flex: 1;
+    }
+    .arh:nth-child(even){
+        flex-direction: row-reverse;
+    }
+}
+
+/* regalitate */
+
+.regalitate{
+    margin-top: 40px;
+    padding: 40px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/egiptbackground4.jpg") center/cover no-repeat fixed;
+}
+
+.reg{
+    background: #feffbf;
+    padding: 35px;
+    text-align: center;
+    margin: 24px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.reg h3{
+    font-size: 25px;
+}
+.reg p{
+    opacity: 0.7;
+    line-height: 1.8;
+    width: 60%;
+    margin: 0 auto;
+}
+.reg img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin: 25px auto;
+}
+
+.reg:hover{
+    transform: translateY(-18px);
+}
+
+h4{
+    color: white;
+    font-size: 20px;
+}
+@media(min-width: 992px){
+    .regalitate-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+@media(min-width: 1370px){
+    .regalitate-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 500px){
+    .reg p{
+        width: 100%;
+    }
+    .reg img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.showModal{
+    position: fixed;
+    background: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.gotopbtn{
+
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 45px;
+    right: 35px;
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 43px;
+    color: #919191;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.gotopbtn.active{
+    visibility: visible;
+    opacity: 1;
+}
